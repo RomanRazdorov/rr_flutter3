@@ -1,5 +1,6 @@
 import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:rr_flutter3/stateless_example.dart';
 
 class DarkThemeScreen extends StatefulWidget {
   @override
@@ -47,6 +48,18 @@ class _DarkThemeScreenState extends State<DarkThemeScreen> {
                   const SizedBox(width: 10),
                   const Text('Dark'),
                 ],
+              ),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                child: const Text("Stateless Screen"),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const StatelessScreen(),
+                    ),
+                  );
+                },
               ),
             ],
           ),
